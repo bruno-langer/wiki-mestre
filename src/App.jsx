@@ -165,15 +165,16 @@ export default function WikiGame() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 py-8 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {!gameStarted ? (
           <div className="space-y-6 bg-white p-6 md:p-8 rounded-2xl shadow-xl">
             <div className="text-center">
               <h1 className="text-3xl md:text-4xl font-bold text-indigo-800 mb-2">
-                7 Wikis de Separação
+                Wiki Mestre!
               </h1>
               <p className="text-gray-600">
-                Navegue de um artigo ao outro usando apenas os links internos!
+                Encontre o artigo final com menos cliques e se torne o Wiki Mestre! <br />
+                Cada dia um desafio diferente para você!
               </p>
             </div>
 
@@ -222,7 +223,7 @@ export default function WikiGame() {
             <div className="mt-8 border-t pt-6">
               <h2 className="text-xl font-semibold mb-4 flex items-center text-indigo-800">
                 <Trophy className="mr-2" size={20} />
-                Ranking (Top 10)
+                Suas últimas partidas
               </h2>
               {rankings.length > 0 ? (
                 <div className="bg-gray-50 rounded-xl overflow-hidden">
@@ -262,7 +263,7 @@ export default function WikiGame() {
                 </div>
               ) : (
                 <p className="text-gray-500 italic text-center py-4">
-                  Ainda não há registros. Seja o primeiro a completar o desafio!
+                  Ainda não há registros. Complete um desafio para salvar seu resultado.
                 </p>
               )}
             </div>
