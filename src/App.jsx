@@ -5,6 +5,7 @@ import { Button } from "./componentes/ui/Button";
 import { wikiDailyPairs } from "./assets/list.js";
 import { GameCompletionDialog } from "./componentes/GameCompletionDialog.jsx";
 import { Trophy, Clock, History, Target, RefreshCw, Home } from "lucide-react";
+import logo from "./assets/icon.svg";
 
 export default function WikiGame() {
   const [startPage, setStartPage] = useState("");
@@ -23,13 +24,14 @@ export default function WikiGame() {
     return stored ? JSON.parse(stored) : [];
   });
   const [showCompletionDialog, setShowCompletionDialog] = useState(false);
+  const articleRef = useRef(null);
 
   startTimeRef.current = startTime;
 
   useEffect(() => {
     if (currentPage) fetchArticle(currentPage);
   }, [currentPage]);
-
+  
   const fetchArticle = async (title) => {
     try {
       const response = await fetch(
@@ -48,6 +50,7 @@ export default function WikiGame() {
           // ALLOW_DATA_ATTR: true,
         })
       );
+      articleRef.current.scrollTo(0, 0);
     } catch (error) {
       console.error("Error fetching article:", error);
       setArticleHtml(
@@ -162,6 +165,7 @@ export default function WikiGame() {
   const Article = useMemo(
     () => (
       <div
+        ref={articleRef}
         className="prose max-w-full p-4 overflow-y-auto h-[calc(100vh-250px)] bg-white"
         onClick={handleArticleClick}
         dangerouslySetInnerHTML={{
@@ -178,7 +182,7 @@ export default function WikiGame() {
         {!gameStarted ? (
           <div className="space-y-6 bg-white p-6 md:p-8 rounded-2xl shadow-xl">
             <div className="flex items-center justify-center space-x-4 mx-auto">
-              <img src="./public/icon.svg" alt="" />
+              <img src={logo} alt="" />
               <div className="text-left">
                 <h1 className="text-3xl md:text-4xl font-bold text-purple-800 mb-2 font-[Rubik]">
                   Wiki Mestre!
