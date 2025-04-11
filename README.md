@@ -77,7 +77,7 @@ O nome **Wiki Mestre** remete à figura de um sábio ou mestre das conexões do 
 
 ## 🖼 Logo
 
-<img src="public/logo.png" alt="Logo do Wiki Mestre" width="200"/>
+<img src="public/wiki-mestre.svg" alt="Logo do Wiki Mestre" width="200"/>
 
 ## 📜 Licença
 
