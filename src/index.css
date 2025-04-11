@@ -16,3 +16,39 @@ a {
   color: #3538ec;
   text-decoration: inherit;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-in-out forwards;
+}
+
+.border-red {
+  border: 1px solid #FF0000;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+  max-width: 35px;
+  margin: 0 auto;
+}
+
+#logo-game-top-bar {
+  width: 30vw;
+}
+
+#clock  {
+  width: 5vw;
+  justify-content: center;
+  align-items: center;
+}

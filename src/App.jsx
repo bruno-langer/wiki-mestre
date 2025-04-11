@@ -25,13 +25,14 @@ export default function WikiGame() {
   });
   const [showCompletionDialog, setShowCompletionDialog] = useState(false);
   const articleRef = useRef(null);
+  const [showLogo, setShowLogo] = useState(false);
 
   startTimeRef.current = startTime;
 
   useEffect(() => {
     if (currentPage) fetchArticle(currentPage);
   }, [currentPage]);
-  
+
   const fetchArticle = async (title) => {
     try {
       const response = await fetch(
@@ -69,6 +70,8 @@ export default function WikiGame() {
     setElapsedTime(0);
     setStartTime(Date.now());
     setGameStarted(true);
+    setShowLogo(true);
+
 
     // Limpe qualquer timer existente
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -232,6 +235,7 @@ export default function WikiGame() {
             </div>
 
             <Button
+              id="startGame"
               className="w-full bg-purple-800 hover:bg-indigo-700 transition-colors py-3 text-lg font-[Rubik] font-bold"
               onClick={startGame}
               disabled={!startPage || !targetPage}
@@ -290,8 +294,12 @@ export default function WikiGame() {
           </div>
         ) : (
           <div className="bg-white rounded-xl shadow-xl overflow-hidden">
-            <div className="bg-indigo-700 text-white p-4">
+
+            <div id="game-top-bar" className="bg-indigo-700 text-white p-4 ">
+
+
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+
                 <div className="flex items-center">
                   <Button
                     onClick={() => setGameStarted(false)}
@@ -303,21 +311,51 @@ export default function WikiGame() {
                   <h2 className="text-lg font-bold truncate">{currentPage}</h2>
                 </div>
 
+                <div id="logo-game-top-bar" className="rounded-lg px-3 py-1 flex items-center justify-center animate-fade-in">
+                  {showLogo && (
+                    <div className="flex flex-row items-center justify-center">
+                      <div className="bg-white rounded-lg px-1 py-1">
+                      <img
+                        src={logo}
+                        alt="Logo do Wiki Mestre"
+                        className="opacity-0 animate-fade-in"
+                        id="logo"
+                      /></div>
+                      <span>
+                        <div className="text-2xl md:text-2xl font-bold text-white-300 ml-2 font-[Rubik]" >
+                          Wiki Mestre!
+                        </div>
+                      </span>
+                    </div>
+
+
+
+
+                  )}
+
+                </div>
                 <div className="flex flex-wrap gap-3">
+
+
                   <div className="bg-indigo-800 rounded-lg px-3 py-1 flex items-center">
                     <Target size={16} className="mr-1" />
                     <span className="text-sm">{targetPage}</span>
                   </div>
+
+
+
+
                   <div className="bg-indigo-800 rounded-lg px-3 py-1 flex items-center">
                     <RefreshCw size={16} className="mr-1" />
                     <span className="text-sm">{clicks} cliques</span>
                   </div>
-                  <div className="bg-indigo-800 rounded-lg px-3 py-1 flex items-center">
+                  <div id="clock" className="bg-indigo-800 rounded-lg px-3 py-1 flex items-center">
                     <Clock size={16} className="mr-1" />
                     <span className="text-sm">{elapsedTime}s</span>
                   </div>
                 </div>
               </div>
+
             </div>
 
             <div className="bg-indigo-100 p-2 overflow-x-auto">
