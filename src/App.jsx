@@ -106,6 +106,7 @@ export default function WikiGame() {
   }, []);
 
   const handleArticleClick = (e) => {
+    e.preventDefault();
     const link = e.target.closest("a");
 
     if (!link) return;
@@ -114,9 +115,18 @@ export default function WikiGame() {
 
     if (!href) return;
 
-    console.log("Link clicado:", href);
+    console.log(JSON.stringify(href));
 
     // Para links no formato "./República"
+
+    if (href.includes(".png") || href.includes(".jpg")) {
+      console.log("Imagem clicada");
+      alert(
+        "Esse link não é válido, você clicou em uma imagem mas seu progresso ainda continua!"
+      );
+      return;
+    }
+
     if (href.startsWith("./")) {
       e.preventDefault();
 
@@ -149,7 +159,6 @@ export default function WikiGame() {
     }
   }, [currentPage, targetPage, clicks, gameStarted]);
 
-
   const Article = useMemo(
     () => (
       <div
@@ -168,14 +177,18 @@ export default function WikiGame() {
       <div className="max-w-7xl mx-auto">
         {!gameStarted ? (
           <div className="space-y-6 bg-white p-6 md:p-8 rounded-2xl shadow-xl">
-            <div className="text-center">
-              <h1 className="text-3xl md:text-4xl font-bold text-indigo-800 mb-2">
-                Wiki Mestre!
-              </h1>
-              <p className="text-gray-600">
-                Encontre o artigo final com menos cliques e se torne o Wiki Mestre! <br />
-                Cada dia um desafio diferente para você!
-              </p>
+            <div className="flex items-center justify-center space-x-4 mx-auto">
+              <img src="./public/icon.svg" alt="" />
+              <div className="text-left">
+                <h1 className="text-3xl md:text-4xl font-bold text-purple-800 mb-2 font-[Rubik]">
+                  Wiki Mestre!
+                </h1>
+                <p className="text-gray-600">
+                  Encontre o artigo final com menos cliques e se torne o Wiki
+                  Mestre! <br />
+                  Cada dia um desafio diferente para você!
+                </p>
+              </div>
             </div>
 
             <div className="grid gap-4">
@@ -213,7 +226,7 @@ export default function WikiGame() {
             </div>
 
             <Button
-              className="w-full bg-indigo-600 hover:bg-indigo-700 transition-colors py-3 text-lg"
+              className="w-full bg-purple-800 hover:bg-indigo-700 transition-colors py-3 text-lg font-[Rubik] font-bold"
               onClick={startGame}
               disabled={!startPage || !targetPage}
             >
@@ -263,7 +276,8 @@ export default function WikiGame() {
                 </div>
               ) : (
                 <p className="text-gray-500 italic text-center py-4">
-                  Ainda não há registros. Complete um desafio para salvar seu resultado.
+                  Ainda não há registros. Complete um desafio para salvar seu
+                  resultado.
                 </p>
               )}
             </div>
