@@ -135,10 +135,12 @@ export default function WikiGame() {
 
       // Extrai o título do artigo (tudo após "./")
       const articleTitle = href.substring(2);
+      const articleTitleReadable = articleTitle.replace(/_/g, " ");
 
-      console.log("Navegando para artigo:", articleTitle);
-      setCurrentPage(articleTitle);
-      setHistory((prev) => [...prev, articleTitle]);
+
+      console.log("Navegando para artigo:", articleTitleReadable);
+      setCurrentPage(articleTitleReadable);
+      setHistory((prev) => [...prev, articleTitleReadable]);
       setClicks((prev) => prev + 1);
       return;
     }
