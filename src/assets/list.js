@@ -1,7 +1,7 @@
 const wikiDailyPairs = {
   "2025-04-10": ["Buraco Negro", "Pizza"],
   "2025-04-11": ["Vladimir Lenin", "TikTok"],
-  "2025-04-12": ["Origami", "Teorema de Fermat"],
+  "2025-04-12": ["Origami", "Princípio de Fermat"],
   "2025-04-13": ["Candomblé", "Blockchain"],
   "2025-04-14": ["Monte Everest", "Mona Lisa"],
   "2025-04-15": ["Guerra Fria", "Dragon Ball Z"],
