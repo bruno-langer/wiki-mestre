@@ -6,7 +6,7 @@ const wikiDailyPairs = {
   "2025-04-14": ["Monte Everest", "Mona Lisa"],
   "2025-04-15": ["Guerra Fria", "Dragon Ball Z"],
   "2025-04-16": ["Mahatma Gandhi", "Netflix"],
-  "2025-04-17": ["Baleia Azul", "Teclado Mecânico"],
+  "2025-04-17": ["Baleia Azul", "Máquina de Escrever"],
   "2025-04-18": ["Ópera", "Sistema Operacional Linux"],
   "2025-04-19": ["Cerveja", "Guerra do Vietnã"],
   "2025-04-20": ["Vincent van Gogh", "Plutônio"],
