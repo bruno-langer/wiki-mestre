@@ -61,7 +61,6 @@ export default function WikiGame() {
 
   // Função para iniciar o jogo
   const startGame = () => {
-    console.log("GAME START");
 
     setCurrentPage(startPage);
     setHistory([startPage]);
