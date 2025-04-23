@@ -12,7 +12,13 @@ const wikiDailyPairs = {
   "2025-04-20": ["Vincent van Gogh", "Plutônio"],
   "2025-04-21": ["Rock and Roll", "Imperador Romano"],
   "2025-04-22": ["Super Mario", "Sigmund Freud"],
-  "2025-04-23": ["Taj Mahal", "Física quântica"]
+  "2025-04-23": ["Taj Mahal", "Física quântica"],
+  "2025-04-23": ["Guerra Fria", "Leonardo da Vinci"],
+  "2025-04-24": ["Renascimento", "Crise dos mísseis de Cuba"],
+  "2025-04-25": ["Economia comportamental", "Thor"],
+  "2025-04-26": ["Google", "Led"],
+  "2025-04-27": ["Mitologia nórdica", "Bambu"],
+  "2025-04-28": ["Simulação computacional", "Impressão 3D"]
 };
 
 
