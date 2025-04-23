@@ -12,7 +12,7 @@ const wikiDailyPairs = {
   "2025-04-20": ["Vincent van Gogh", "Plutônio"],
   "2025-04-21": ["Rock and Roll", "Imperador Romano"],
   "2025-04-22": ["Super Mario", "Sigmund Freud"],
-  "2025-04-23": ["Taj Mahal", "Física Quântica"]
+  "2025-04-23": ["Taj Mahal", "Física quântica"]
 };
 
 
