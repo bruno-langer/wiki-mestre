@@ -1,6 +1,12 @@
-# 🧙 Wiki Mestre
+# Wiki Mestre
 
-**Wiki Mestre** é um jogo divertido e desafiador no qual o objetivo é ir de uma página da Wikipédia até outra em até **7 cliques**, usando apenas os links internos dos artigos. Teste seus conhecimentos e habilidades de navegação e descubra quantas conexões você consegue fazer entre temas aparentemente distantes!
+<div style="display: flex; align-items: center; gap: 20px;">
+  <img src="public/wiki-mestre.svg" alt="Logo do Wiki Mestre" width="80" />
+  <p>
+    <strong>Wiki Mestre</strong> é um jogo divertido e desafiador no qual o objetivo é ir de uma página da Wikipédia até outra em até <strong>7 cliques</strong>, usando apenas os links internos dos artigos. Teste seus conhecimentos e habilidades de navegação e descubra quantas conexões você consegue fazer entre temas aparentemente distantes!
+  </p>
+</div>
+
 
 ## 📦 Funcionalidades
 
@@ -74,10 +80,6 @@ O jogo sugere automaticamente desafios diários com base em uma lista predefinid
 ## 🧙 Nome
 
 O nome **Wiki Mestre** remete à figura de um sábio ou mestre das conexões do conhecimento – como um sensei da Wikipédia 🧠✨
-
-## 🖼 Logo
-
-<img src="public/logo.png" alt="Logo do Wiki Mestre" width="200"/>
 
 ## 📜 Licença
 
