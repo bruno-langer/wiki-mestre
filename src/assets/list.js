@@ -18,7 +18,17 @@ const wikiDailyPairs = {
   "2025-04-25": ["Economia comportamental", "Thor"],
   "2025-04-26": ["Google", "Led"],
   "2025-04-27": ["Mitologia nórdica", "Bambu"],
-  "2025-04-28": ["Simulação computacional", "Impressão 3D"]
+  "2025-04-28": ["Simulação computacional", "Impressão 3D"],
+  "2025-05-02": ["Fogo", "Avião"],
+  "2025-05-03": ["Pão", "Internet"],
+  "2025-05-04": ["Chuva", "Cinema"],
+  "2025-05-05": ["Praia", "Relógio"],
+  "2025-05-06": ["Cachorro", "Revolução"],
+  "2025-05-07": ["Bola", "Matemática"],
+  "2025-05-08": ["Fruta", "Egito"],
+  "2025-05-09": ["Janela", "Satélite"],
+  "2025-05-10": ["Carro", "Planeta"],
+  "2025-05-11": ["Árvore", "Dinheiro"]
 };
 
 
